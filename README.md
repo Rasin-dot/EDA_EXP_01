@@ -56,6 +56,12 @@ To perform Exploratory Data Analysis (EDA) on the IPL matches dataset and derive
   Identify teams with consistent winning trends.
   
 ## Program and Output
+**1.Import Libraries**
+
+**2.Load Dataset**
+
+**3.Matches per Season (Univariate Analysis)**
+
   ```
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -68,6 +74,9 @@ print(matches.head())
 
 <img width="1112" height="796" alt="image" src="https://github.com/user-attachments/assets/88df9e54-e4af-4e41-8798-5634f2964e03" />
 
+
+
+**4.Top Winning Teams (Univariate Analysis)**
 ```
 
 season_counts = matches['season'].value_counts().sort_index()
@@ -80,6 +89,10 @@ plt.ylabel("Matches")
 plt.show()
 ```
 <img width="1171" height="877" alt="image" src="https://github.com/user-attachments/assets/640b1f1a-ee2a-4c3c-95fa-b1577c7df615" />
+
+
+
+**5.Toss Decisions (Univariate Analysis)**
 
 ```
 team_wins = matches['winner'].value_counts()
@@ -95,6 +108,9 @@ plt.show()
 <img width="1179" height="720" alt="image" src="https://github.com/user-attachments/assets/c2355444-37a5-4022-8859-690109a48d43" />
 
 
+
+
+**6.Top Venues (Univariate Analysis)**
 ```
 toss_decision = matches['toss_decision'].value_counts()
 print("\nToss Decisions:\n", toss_decision)
@@ -106,6 +122,9 @@ plt.show()
 <img width="1165" height="631" alt="image" src="https://github.com/user-attachments/assets/74d52ef0-48a7-4af9-9a5d-644b74a971ce" />
 
 
+
+
+**7.Draw Insights**
 ```
 venue_counts = matches['venue'].value_counts().head(5)
 print("\nTop Venues:\n", venue_counts)
